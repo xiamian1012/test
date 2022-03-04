@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="olympic display">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>olympic display</title>    
 
-  <style>
-html,
-body {
-    height:100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    transform-origin:0px 0px 0px;
-    box-sizing: border-box;
-   
-}
-
-#app {
-    width: 100%;
-    height: 100%;
-}
+<style>
+        html,body {
+                width:100%;
+                height: 100%; 
+                margin: 0;
+                transform-origin:0px 0px 0px
+        }
 
 #chart1 {
-top:20px;
-left:10px;
-width: 100%;
-height:50%;
-z-index: 2;
 
+width: 100%;
+height:100%;
+z-index: 2;
+    
 }
 
 #chart2{
 position: absolute;
 top:58px;
 left:745px;
-width: 442px;
-height:163px;
+width: 23%;
+height:18.3%;
 z-index: 3;
 }
 
@@ -43,8 +36,8 @@ z-index: 3;
 position: absolute;
 top:338px;
 left:600px;
-width: 736px;
-height:528px;
+width: 38.3%;
+height:57%;
 z-index: 2;
 }
 
@@ -91,6 +84,8 @@ z-index: 2;
     z-index: 2;
 }
 
+
+
    </style> 
 <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.1.2/echarts.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
@@ -99,36 +94,21 @@ z-index: 2;
 <script src="https://cdn.bootcdn.net/ajax/libs/echarts-gl/2.0.7/echarts-gl.min.js"></script>
 </head>
 <body>
-
 <div id="video"> 
 <video  autoplay loop muted>
   <source src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/icon/human.mp4" type="video/mp4">
 </video>
 </div>
 <div id="background">
-    <img src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/icon/background4.jpg"/>
+    <img src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/icon/background4.jpg" width="100%" height="100%" />
 </div>
-
-<div id="app">
-    <div id="chart3" ></div>  
     <div id="chart1" ></div>
-    <div id="chart2" ></div>  
-</div>
+    <div id="chart2" ></div>   
+    <div id="chart3" ></div>
+
 
 </body>
-<script src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/js/olympic.min.js"></script>
-        <script type="text/javascript">
-        // 一开始加载就适应屏幕的宽高
-        $(function() {
-            //offsetWidth： 获取body元素对象的宽度，即offsetWidth=width+padding+border availWidth：返回当前屏幕宽度
-            var scale = document.body.clientWidth / 1920;
-            $(document.body).css("transform", "scale("+scale+")");
-        });
-        $(window).resize(function() {
-            var scale = document.body.clientWidth / 1920;
-            $(document.body).css("transform", "scale("+scale+")" );
-        });
-
-     </script>
+<script src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/js/olympic_v1.min.js" ></script>
+ 
 
 </html>
